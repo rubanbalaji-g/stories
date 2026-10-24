@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Melting Bookmark Animation */
+@keyframes meltDrip {
+  0%, 100% {
+    border-radius: 0 0 16px 16px;
+    height: 100%;
+  }
+  50% {
+    border-radius: 0 0 28px 4px;
+  }
+}
+
+.melting-ribbon {
+  animation: meltDrip 6s ease-in-out infinite;
+}
+
+/* Surrealist Grain Overlay */
+.surreal-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}

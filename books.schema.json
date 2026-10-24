@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BookCatalogSchema",
+  "description": "Validation schema for Surrealist Reader catalog and book descriptors",
+  "type": "object",
+  "required": ["books"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "books": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "slug", "title", "author", "year", "license"],
+        "properties": {
+          "id": { "type": "string" },
+          "slug": { "type": "string" },
+          "title": {
+            "type": "object",
+            "required": ["en"],
+            "properties": {
+              "en": { "type": "string" },
+              "ta": { "type": "string" }
+            }
+          },
+          "author": { "type": "string" },
+          "year": { "type": "integer" },
+          "license": { "type": "string" },
+          "genre": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "totalChapters": { "type": "integer" },
+          "coverStyle": { "type": "string" },
+          "hasTamilTranslation": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

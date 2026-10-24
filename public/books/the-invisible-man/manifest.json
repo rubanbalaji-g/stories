@@ -1,0 +1,271 @@
+{
+  "id": "the-invisible-man",
+  "title": {
+    "en": "The Invisible Man",
+    "ta": "உருவமற்ற மனிதன்"
+  },
+  "author": {
+    "en": "H. G. Wells",
+    "ta": "ஹெச். ஜி. வெல்ஸ்"
+  },
+  "year": 1897,
+  "totalChapters": 32,
+  "chapters": [
+    {
+      "index": 0,
+      "filename": "00_THE_INVISIBLE_MAN.md",
+      "title": {
+        "en": "THE INVISIBLE MAN",
+        "ta": "தி இன்விசிபிள் மேன்"
+      }
+    },
+    {
+      "index": 1,
+      "filename": "01_Section_1.md",
+      "title": {
+        "en": "Section 1",
+        "ta": "*"
+      }
+    },
+    {
+      "index": 2,
+      "filename": "02_Contents.md",
+      "title": {
+        "en": "Contents",
+        "ta": "உள்ளடக்கங்கள்"
+      }
+    },
+    {
+      "index": 3,
+      "filename": "03_Chapter_I_-_The_Strange_Mans_Arrival.md",
+      "title": {
+        "en": "Chapter I - The Strange Man's Arrival",
+        "ta": "அதிகாரம் I - விசித்திர மனிதனின் வருகை"
+      }
+    },
+    {
+      "index": 4,
+      "filename": "04_Chapter_II_-_Mr_Teddy_Henfreys_First_Impressions.md",
+      "title": {
+        "en": "Chapter II - Mr. Teddy Henfrey's First Impressions",
+        "ta": "அத்தியாயம் II - திரு. டெட்டி ஹென்ப்ரியின் முதல் அபிப்பிராயங்கள்"
+      }
+    },
+    {
+      "index": 5,
+      "filename": "05_Chapter_III_-_The_Thousand_and_One_Bottles.md",
+      "title": {
+        "en": "Chapter III - The Thousand and One Bottles",
+        "ta": "அத்தியாயம் III - ஆயிரத்து ஒரு பாட்டில்கள்"
+      }
+    },
+    {
+      "index": 6,
+      "filename": "06_Chapter_IV_-_Mr_Cuss_Interviews_the_Stranger.md",
+      "title": {
+        "en": "Chapter IV - Mr. Cuss Interviews the Stranger",
+        "ta": "நான்காம் அத்தியாயம் - திரு. கஸ் அந்நியரைச் சந்திப்பது"
+      }
+    },
+    {
+      "index": 7,
+      "filename": "07_Chapter_V_-_The_Burglary_at_the_Vicarage.md",
+      "title": {
+        "en": "Chapter V - The Burglary at the Vicarage",
+        "ta": "ஐந்தாம் அதிகாரம் - விகாரேஜில் திருட்டு"
+      }
+    },
+    {
+      "index": 8,
+      "filename": "08_Chapter_VI_-_The_Furniture_that_Went_Mad.md",
+      "title": {
+        "en": "Chapter VI - The Furniture that Went Mad",
+        "ta": "அத்தியாயம் VI - பைத்தியம் பிடித்த தச்சுப் பொருட்கள்"
+      }
+    },
+    {
+      "index": 9,
+      "filename": "09_Chapter_VII_-_The_Unveiling_of_the_Stranger.md",
+      "title": {
+        "en": "Chapter VII - The Unveiling of the Stranger",
+        "ta": "அத்தியாயம் VII - அந்நியனின் முகத்திரை விலகுதல்"
+      }
+    },
+    {
+      "index": 10,
+      "filename": "10_Chapter_VIII_-_In_Transit.md",
+      "title": {
+        "en": "Chapter VIII - In Transit",
+        "ta": "அதிகாரம் VIII - பயணத்தில்"
+      }
+    },
+    {
+      "index": 11,
+      "filename": "11_Chapter_IX_-_Mr_Thomas_Marvel.md",
+      "title": {
+        "en": "Chapter IX - Mr. Thomas Marvel",
+        "ta": "அதிகாரம் IX - திரு. தாமஸ் மார்வெல்"
+      }
+    },
+    {
+      "index": 12,
+      "filename": "12_Chapter_X_-_Mr_Marvels_Visit_to_Iping.md",
+      "title": {
+        "en": "Chapter X - Mr. Marvel's Visit to Iping",
+        "ta": "அத்தியாயம் X - திரு. மார்வெலின் ஐபிங் வருகை"
+      }
+    },
+    {
+      "index": 13,
+      "filename": "13_Chapter_XI_-_In_the_Coach_and_Horses.md",
+      "title": {
+        "en": "Chapter XI - In the \"Coach and Horses\"",
+        "ta": "அத்தியாயம் XI - \"கோச் அண்ட் ஹார்ஸஸ்\" விடுதியில்"
+      }
+    },
+    {
+      "index": 14,
+      "filename": "14_Chapter_XII_-_The_Invisible_Man_Loses_His_Temper.md",
+      "title": {
+        "en": "Chapter XII - The Invisible Man Loses His Temper",
+        "ta": "அத்தியாயம் XII - கண்ணுக்குத் தெரியாத மனிதன் தனது கோபத்தை இழக்கிறான்"
+      }
+    },
+    {
+      "index": 15,
+      "filename": "15_Chapter_XIII_-_Mr_Marvel_Discusses_His_Resignation.md",
+      "title": {
+        "en": "Chapter XIII - Mr. Marvel Discusses His Resignation",
+        "ta": "அத்தியாயம் XIII - திரு. மார்வெல் தன் ராஜினாமா பற்றிக் கலந்தாலோசித்தல்"
+      }
+    },
+    {
+      "index": 16,
+      "filename": "16_Chapter_XIV_-_At_Port_Stowe.md",
+      "title": {
+        "en": "Chapter XIV - At Port Stowe",
+        "ta": "அதிகாரம் XIV - போர்ட் ஸ்டோவில்"
+      }
+    },
+    {
+      "index": 17,
+      "filename": "17_Chapter_XV_-_The_Man_Who_was_Running.md",
+      "title": {
+        "en": "Chapter XV - The Man Who was Running",
+        "ta": "அதிகாரம் XV - ஓடிக்கொண்டிருந்த மனிதன்"
+      }
+    },
+    {
+      "index": 18,
+      "filename": "18_Chapter_XVI_-_In_the_Jolly_Cricketers.md",
+      "title": {
+        "en": "Chapter XVI - In the \"Jolly Cricketers\"",
+        "ta": "அதிகாரம் XVI - \"ஜாலி கிரிப்பிகர்ஸ்\" விடுதியில்"
+      }
+    },
+    {
+      "index": 19,
+      "filename": "19_Chapter_XVII_-_Dr_Kemps_Visitor.md",
+      "title": {
+        "en": "Chapter XVII - Dr Kemp's Visitor",
+        "ta": "அதிகார XVII - டாக்டர் கெம்பின் விருந்தாளி"
+      }
+    },
+    {
+      "index": 20,
+      "filename": "20_Chapter_XVIII_-_The_Invisible_Man_Sleeps.md",
+      "title": {
+        "en": "Chapter XVIII - The Invisible Man Sleeps",
+        "ta": "அத்தியாயம் XVIII - கண்ணுக்குத் தெரியாத மனிதன் உறங்குகிறான்"
+      }
+    },
+    {
+      "index": 21,
+      "filename": "21_Chapter_XIX_-_Certain_First_Principles.md",
+      "title": {
+        "en": "Chapter XIX - Certain First Principles",
+        "ta": "அத்தியாயம் XIX - சில முதன்மைக் கோட்பாடுகள்"
+      }
+    },
+    {
+      "index": 22,
+      "filename": "22_Chapter_XX_-_At_the_House_in_Great_Portland_Street.md",
+      "title": {
+        "en": "Chapter XX - At the House in Great Portland Street",
+        "ta": "இருபதாம் அதிகாகம் - கிரேட் போர்ட்லெட் வீதியில் உள்ள வீடு"
+      }
+    },
+    {
+      "index": 23,
+      "filename": "23_Chapter_XXI_-_In_Oxford_Street.md",
+      "title": {
+        "en": "Chapter XXI - In Oxford Street",
+        "ta": "அத்தியாயம் XXI - ஆக்ஸ்போர்ட் வீதியில்"
+      }
+    },
+    {
+      "index": 24,
+      "filename": "24_Chapter_XXII_-_In_the_Emporium.md",
+      "title": {
+        "en": "Chapter XXII - In the Emporium",
+        "ta": "அதிகாரம் XXII - பேரங்காடியில்"
+      }
+    },
+    {
+      "index": 25,
+      "filename": "25_Chapter_XXIII_-_In_Drury_Lane.md",
+      "title": {
+        "en": "Chapter XXIII - In Drury Lane",
+        "ta": "அத்தியாயம் XXIII - ட்ரூரி லேனில்"
+      }
+    },
+    {
+      "index": 26,
+      "filename": "26_Chapter_XXIV_-_The_Plan_that_Failed.md",
+      "title": {
+        "en": "Chapter XXIV - The Plan that Failed",
+        "ta": "அத்தியாயம் XXIV - தோல்வியுற்ற திட்டம்"
+      }
+    },
+    {
+      "index": 27,
+      "filename": "27_Chapter_XXV_-_The_Hunting_of_the_Invisible_Man.md",
+      "title": {
+        "en": "Chapter XXV - The Hunting of the Invisible Man",
+        "ta": "அத்தியாயம் XXV - கண்ணுக்குத் தெரியாத மனிதனைத் தேடுதல்"
+      }
+    },
+    {
+      "index": 28,
+      "filename": "28_Chapter_XXVI_-_The_Wicksteed_Murder.md",
+      "title": {
+        "en": "Chapter XXVI - The Wicksteed Murder",
+        "ta": "அதிகாரம் இருபத்தாறு - விக்ஸ்டீடின் கொலை"
+      }
+    },
+    {
+      "index": 29,
+      "filename": "29_Chapter_XXVII_-_The_Siege_of_Kemps_House.md",
+      "title": {
+        "en": "Chapter XXVII - The Siege of Kemp's House",
+        "ta": "அதிகார இருபத்தி ஏழு - கெம்பின் வீட்டின் மீது முற்றுகை"
+      }
+    },
+    {
+      "index": 30,
+      "filename": "30_Chapter_XXVIII_-_The_Hunter_Hunted.md",
+      "title": {
+        "en": "Chapter XXVIII - The Hunter Hunted",
+        "ta": "இருபத்தெட்டாவது அதிகாரி - வேட்டையாடப்பட்ட வேடன்"
+      }
+    },
+    {
+      "index": 31,
+      "filename": "31_The_Epilogue.md",
+      "title": {
+        "en": "The Epilogue",
+        "ta": "முடிவுரை"
+      }
+    }
+  ]
+}

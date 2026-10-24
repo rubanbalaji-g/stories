@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": "the-invisible-man",
+      "title": {
+        "en": "The Invisible Man",
+        "ta": "உருவமற்ற மனிதன்"
+      },
+      "author": {
+        "en": "H. G. Wells",
+        "ta": "ஹெச். ஜி. வெல்ஸ்"
+      },
+      "year": 1897,
+      "hasTamilTranslation": true,
+      "manifest": "/books/the-invisible-man/manifest.json"
+    }
+  ]
+}

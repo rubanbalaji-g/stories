@@ -13,16 +13,16 @@ import {
   Volume2, 
   VolumeX,
   Sparkles,
-  ExternalLink
+  ExternalLink,
+  BookMarked
 } from 'lucide-react';
 
-// Themes matching design.md
 const THEMES = {
   twilight: {
     id: 'twilight',
     name: 'Magritte Twilight',
     bg: 'bg-[#070a13]',
-    surface: 'bg-[#0f172a]/80 backdrop-blur-md border-slate-800',
+    surface: 'bg-[#0f172a]/85 backdrop-blur-md border-slate-800',
     text: 'text-[#cbd5e1]',
     heading: 'text-amber-100',
     accent: 'text-amber-400',
@@ -56,47 +56,46 @@ const THEMES = {
   }
 };
 
-// Demo sample for reader engine verification (Zero-Upload compliant)
-const SAMPLE_LORE = {
-  title: {
-    en: "The Metaphysics of an Unseen Stranger",
-    ta: "கண்ணுக்குத் தெரியாத ஒருவனின் விசித்திர இருப்பு"
-  },
-  subtitle: {
-    en: "A Surrealist Literary Reading Shell",
-    ta: "நவீன இலக்கிய உரைநடைக்கான கனவுவெளி வாசகத் தளம்"
-  },
-  chapters: [
-    {
-      id: 1,
-      title: { en: "Prologue: The Arrival Through the Veil", ta: "முன்னுரை: பனித்திரை ஊடுருவிய வரவு" },
-      content: {
-        en: `The stranger came early in February, through the biting wind and driving snow, walking over the down from Bramblehurst railway station. He carried a little black portmanteau in his thickly gloved hand, wrapped up from head to foot, and the brim of his soft felt hat hid every inch of his face but the shiny tip of his nose.\n\nHe staggered into the "Coach and Horses" more dead than alive, flinging his luggage upon the parlor table. "A fire," he cried with unearthly hollow breath, "in the name of human charity! A room and a fire!"\n\nMrs. Hall, having stoked the hearth, found herself gazing at a visage bound completely in white linen bandages—dark spectacles concealing eyes that seemed to look nowhere, yet saw into the marrow of everything.`,
-        ta: `கடும் குளிர்காற்றும் சுழன்றடிக்கும் பனிமழையும் நிலவிய பிப்ரவரி மாதத்தின் ஒரு காலைப்பொழுதில், பிராம்பிள்ஹர்ஸ்ட் ரயில் நிலையத்திலிருந்து நடந்து அந்த விசித்திர மனிதன் வந்து சேர்ந்தான். அடர்த்தியான கம்பளி கையுறையணிந்த அவனது கையில் ஒரு சிறிய கறுப்புப் பெட்டி இருந்தது; உடலெங்கும் கம்பளி ஆடைகளால் மூடி மறைக்கப்பட்டிருந்த அவனது தொப்பியின் விளிம்பு, பளபளத்த மூக்கு நுனியைத் தவிர முகத்தின் எந்தப் பகுதியையும் வெளிக்காட்டவில்லை.\n\nஅவன் தள்ளாடியபடி "கோச் அண்ட் ஹார்சஸ்" விடுதிக்குள் நுழைந்தான்; கிட்டத்தட்ட உயிரற்றவன் போலத் தோன்றியவன், தனது பயணப்பெட்டியை மேஜை மீது வீசி எறிந்தான். "மனிதநேயத்தின் பெயரால் எனக்கு ஒரு நெருப்பும் அறையும் வேண்டும்!" என்று மனித உலகிற்கு அப்பாற்பட்ட விசித்திரக் குரலில் அவன் கூவினான்.\n\nஅடுப்பில் கனலை மூட்டிய திருமதி ஹால், வெள்ளை நிறத் துணிப்பட்டுகளால் முற்றிலும் சுற்றப்பட்ட அவனது விசித்திரத் தோற்றத்தைக் கண்டு திகைத்துப் போனாள்—இருண்ட கண்ணாடிக்கு அப்பால் இருந்த அவனது கண்கள் எங்குமே பார்ப்பதாகத் தெரியவில்லை, ஆனால் அனைத்தின் ஆன்மாவையும் ஊடுருவிப் பார்ப்பது போல் அமைந்திருந்தன.`
-      }
-    },
-    {
-      id: 2,
-      title: { en: "The Thousand and One Vials", ta: "ஆயிரத்தொரு கண்ணாடிக் குடுவைகள்" },
-      content: {
-        en: `The parlour was transformed into an alchemical labyrinth. Crates and boxes arrived from the station, unpacked into rows of transparent glass vials containing strange liquids—some luminous emerald, others dark as sepia.\n\n"Do not disturb my experiments," the muffled voice echoed from behind locked mahogany doors. Outside the arched window, clouds drifted across a cobalt horizon like bowler hats floating in an impossible sky.`,
-        ta: `அந்த வரவேற்பறை ஒரு ரசவாத மாயக்கூடமாக உருமாறியிருந்தது. ரயில் நிலையத்திலிருந்து வந்த மரப்பெட்டிகள் பிரிக்கப்பட்டு, விசித்திர திரவங்கள் நிறைந்த நூற்றுக்கணக்கான கண்ணாடிக் குடுவைகளாக மேஜைகளில் வரிசைப்படுத்தப்பட்டன—சில பச்சை மரகதம் போல மின்னின, மற்றவை இருண்ட மை போலக் காட்சியளித்தன.\n\n"எனது ஆய்வுகளை யாரும் தொந்தரவு செய்யக்கூடாது," என்று பூட்டிய மரக்கதவுகளுக்குப் பின்னாலிருந்து அந்த வெற்று மனிதனின் அழுத்தமான குரல் ஒலித்தது. வளைந்த ஜன்னலுக்கு வெளியே, கோபால்ட் நீல வானில் தொப்பிகள் மிதப்பது போல மெதுவான வெண்மேகங்கள் நீந்திக் கொண்டிருந்தன.`
-      }
-    }
-  ]
-};
-
 export default function App() {
   const [themeKey, setThemeKey] = useState('twilight');
-  const [lang, setLang] = useState('ta'); // Default to Tamil
+  const [lang, setLang] = useState('ta'); // Default to contemporary Tamil
   const [fontSize, setFontSize] = useState(19);
-  const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
+  const [manifest, setManifest] = useState(null);
+  const [currentChapterIndex, setCurrentChapterIndex] = useState(3); // Chapter 1 starts at index 3
+  const [chapterContent, setChapterContent] = useState('');
+  const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [ambientAudio, setAmbientAudio] = useState(false);
 
   const theme = THEMES[themeKey];
-  const chapter = SAMPLE_LORE.chapters[currentChapterIndex];
+
+  // Fetch manifest
+  useEffect(() => {
+    fetch('/books/the-invisible-man/manifest.json')
+      .then(res => res.json())
+      .then(data => {
+        setManifest(data);
+      })
+      .catch(err => console.error("Could not load manifest:", err));
+  }, []);
+
+  // Fetch chapter content on chapter/lang change
+  useEffect(() => {
+    if (!manifest || !manifest.chapters[currentChapterIndex]) return;
+    const ch = manifest.chapters[currentChapterIndex];
+    setLoading(true);
+    fetch(`/books/the-invisible-man/${lang}/${ch.filename}`)
+      .then(res => res.text())
+      .then(text => {
+        setChapterContent(text);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Error loading chapter:", err);
+        setLoading(false);
+      });
+  }, [manifest, currentChapterIndex, lang]);
 
   // Track scroll progress for melting ribbon
   useEffect(() => {
@@ -110,6 +109,8 @@ export default function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const currentChapter = manifest?.chapters[currentChapterIndex];
 
   return (
     <div className={`min-h-screen ${theme.bg} ${theme.text} transition-colors duration-700 relative selection:bg-amber-500/30`}>
@@ -134,7 +135,6 @@ export default function App() {
       <header className={`sticky top-0 z-40 ${theme.surface} border-b ${theme.border} px-4 sm:px-8 py-3.5 transition-colors duration-500`}>
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           
-          {/* Logo & Portal Identity */}
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setIsDrawerOpen(true)}
@@ -149,7 +149,7 @@ export default function App() {
                 Stories
               </span>
               <span className="hidden sm:inline-block text-[11px] uppercase tracking-wider px-2 py-0.5 rounded border border-amber-500/30 text-amber-300/80 font-mono">
-                Surrealist Canvas
+                {manifest ? manifest.title[lang] : "Surrealist Reader"}
               </span>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function App() {
               </button>
             </div>
 
-            {/* Theme Selector Cycle */}
+            {/* Theme Selector */}
             <button
               onClick={() => {
                 const keys = Object.keys(THEMES);
@@ -194,14 +194,14 @@ export default function App() {
                 setThemeKey(keys[nextIdx]);
               }}
               className={`p-2 rounded-lg border ${theme.border} hover:border-amber-400/50 transition-all`}
-              title={`Theme: ${theme.name} (Click to switch)`}
+              title={`Theme: ${theme.name}`}
             >
               {themeKey === 'twilight' && <Moon className="w-4 h-4 text-indigo-400" />}
               {themeKey === 'vellum' && <Sun className="w-4 h-4 text-amber-600" />}
               {themeKey === 'monolith' && <Sparkles className="w-4 h-4 text-white" />}
             </button>
 
-            {/* Ambient Sound Mock Toggle */}
+            {/* Ambient Sound */}
             <button
               onClick={() => setAmbientAudio(!ambientAudio)}
               className={`p-2 rounded-lg border ${theme.border} hover:border-amber-400/50 transition-all ${ambientAudio ? 'text-amber-400 bg-amber-400/10' : 'text-slate-400'}`}
@@ -221,11 +221,13 @@ export default function App() {
             className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             onClick={() => setIsDrawerOpen(false)}
           />
-          <aside className={`relative w-80 max-w-[85vw] ${theme.surface} border-r ${theme.border} h-full p-6 flex flex-col z-10 shadow-2xl overflow-y-auto`}>
+          <aside className={`relative w-84 max-w-[85vw] ${theme.surface} border-r ${theme.border} h-full p-6 flex flex-col z-10 shadow-2xl overflow-y-auto`}>
             <div className="flex items-center justify-between pb-4 border-b border-slate-700/50">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-amber-400" />
-                <h3 className="font-display font-semibold tracking-wide text-sm">Table of Contents</h3>
+                <h3 className="font-display font-semibold tracking-wide text-sm">
+                  {lang === 'ta' ? 'அத்தியாயங்கள்' : 'Table of Contents'}
+                </h3>
               </div>
               <button 
                 onClick={() => setIsDrawerOpen(false)}
@@ -235,25 +237,25 @@ export default function App() {
               </button>
             </div>
 
-            <div className="mt-6 flex-1 space-y-2">
-              {SAMPLE_LORE.chapters.map((ch, idx) => (
+            <div className="mt-6 flex-1 space-y-1.5 overflow-y-auto pr-1">
+              {manifest?.chapters.map((ch, idx) => (
                 <button
-                  key={ch.id}
+                  key={ch.filename}
                   onClick={() => {
                     setCurrentChapterIndex(idx);
                     setIsDrawerOpen(false);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className={`w-full text-left p-3 rounded-lg border transition-all ${
+                  className={`w-full text-left p-2.5 rounded-lg border transition-all ${
                     idx === currentChapterIndex 
-                      ? `${theme.border} bg-amber-400/10 border-amber-400/50 text-amber-300 font-medium` 
+                      ? `${theme.border} bg-amber-400/15 border-amber-400/50 text-amber-300 font-medium` 
                       : `border-transparent hover:border-slate-700 hover:bg-white/5 opacity-80`
                   }`}
                 >
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-amber-400/70 mb-0.5">
-                    Section {ch.id}
+                  <div className="text-[10px] font-mono uppercase tracking-wider text-amber-400/70">
+                    Section {ch.index}
                   </div>
-                  <div className={`text-sm ${lang === 'ta' ? 'font-tamil' : 'font-serif'}`}>
+                  <div className={`text-xs ${lang === 'ta' ? 'font-tamil' : 'font-serif'} line-clamp-1`}>
                     {ch.title[lang]}
                   </div>
                 </button>
@@ -261,7 +263,7 @@ export default function App() {
             </div>
 
             <div className="pt-4 border-t border-slate-700/50 text-[11px] text-slate-400 flex items-center justify-between">
-              <span>Domain: stories.7400000.xyz</span>
+              <span>stories.7400000.xyz</span>
               <Compass className="w-3.5 h-3.5 text-amber-400 animate-spin" style={{ animationDuration: '20s' }} />
             </div>
           </aside>
@@ -271,28 +273,30 @@ export default function App() {
       {/* Main Surrealist Reading Canvas */}
       <main className="max-w-3xl mx-auto px-5 sm:px-8 py-12 sm:py-20 relative z-10">
         
-        {/* Book / Work Meta Card */}
+        {/* Book Meta Card */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-400/30 text-[11px] font-mono uppercase tracking-widest text-amber-400/90 mb-4 bg-amber-950/20">
-            <span>Classics Portal</span>
+            <span>{manifest ? manifest.author[lang] : "H. G. Wells"}</span>
             <span>•</span>
-            <span>பொதுவெளி இலக்கியம்</span>
+            <span>1897</span>
           </div>
 
           <h1 className={`font-display text-2xl sm:text-4xl md:text-5xl font-bold ${theme.heading} tracking-tight leading-tight mb-3`}>
-            {SAMPLE_LORE.title[lang]}
+            {manifest ? manifest.title[lang] : "The Invisible Man"}
           </h1>
           <p className="text-sm sm:text-base text-slate-400 tracking-wide font-serif italic">
-            {SAMPLE_LORE.subtitle[lang]}
+            {lang === 'ta' ? "நவீன செவ்விலக்கிய உரைநடைத் தமிழாக்கம்" : "A Grotesque Romance — Duke Classics"}
           </p>
         </div>
 
         {/* Chapter Header */}
         <div className="flex items-center justify-between border-y border-slate-800/80 py-4 mb-10">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-amber-400/80">Chapter {chapter.id}</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-400/80">
+              {lang === 'ta' ? `பகுதி ${currentChapter?.index ?? ''}` : `Part ${currentChapter?.index ?? ''}`}
+            </span>
             <h2 className={`text-lg sm:text-xl font-bold ${theme.heading} mt-0.5 ${lang === 'ta' ? 'font-tamil' : 'font-display'}`}>
-              {chapter.title[lang]}
+              {currentChapter?.title[lang]}
             </h2>
           </div>
           <div className="flex items-center gap-1">
@@ -308,9 +312,9 @@ export default function App() {
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
-              disabled={currentChapterIndex === SAMPLE_LORE.chapters.length - 1}
+              disabled={!manifest || currentChapterIndex === manifest.chapters.length - 1}
               onClick={() => {
-                setCurrentChapterIndex(Math.min(SAMPLE_LORE.chapters.length - 1, currentChapterIndex + 1));
+                setCurrentChapterIndex(Math.min(manifest.chapters.length - 1, currentChapterIndex + 1));
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="p-2 rounded border border-slate-800 hover:border-amber-400/40 disabled:opacity-30 disabled:pointer-events-none transition-all"
@@ -321,17 +325,42 @@ export default function App() {
           </div>
         </div>
 
-        {/* Prose Reading Canvas with Custom Typographic Scale */}
-        <article 
-          className={`space-y-6 sm:space-y-8 ${lang === 'ta' ? 'font-tamil leading-[2.1]' : 'font-serif leading-[1.85]'} tracking-normal transition-all duration-300`}
-          style={{ fontSize: `${fontSize}px` }}
-        >
-          {chapter.content[lang].split('\n\n').map((paragraph, pIdx) => (
-            <p key={pIdx} className="text-justify first-letter:float-left first-letter:text-3xl sm:first-letter:text-4xl first-letter:pr-2 first-letter:font-display first-letter:text-amber-400">
-              {paragraph}
-            </p>
-          ))}
-        </article>
+        {/* Prose Reading Canvas */}
+        {loading ? (
+          <div className="py-20 text-center text-slate-500 font-mono text-xs flex items-center justify-center gap-2">
+            <Sparkles className="w-4 h-4 animate-spin text-amber-400" />
+            <span>Loading chapter manuscript...</span>
+          </div>
+        ) : (
+          <article 
+            className={`space-y-6 sm:space-y-8 ${lang === 'ta' ? 'font-tamil leading-[2.1]' : 'font-serif leading-[1.85]'} tracking-normal transition-all duration-300`}
+            style={{ fontSize: `${fontSize}px` }}
+          >
+            {chapterContent.split('\n\n').map((paragraph, pIdx) => {
+              const cleanP = paragraph.trim();
+              if (!cleanP) return null;
+              if (cleanP.startsWith('#')) {
+                return (
+                  <h3 key={pIdx} className="font-display text-xl sm:text-2xl font-bold text-amber-200 mt-8 mb-4 border-b border-slate-800 pb-2">
+                    {cleanP.replace(/^#+\s*/, '')}
+                  </h3>
+                );
+              }
+              if (cleanP.startsWith('>')) {
+                return (
+                  <blockquote key={pIdx} className="border-l-2 border-amber-400/70 pl-4 py-1 italic text-slate-300 bg-amber-400/5 rounded-r">
+                    {cleanP.replace(/^>\s*/, '')}
+                  </blockquote>
+                );
+              }
+              return (
+                <p key={pIdx} className="text-justify first-letter:float-left first-letter:text-3xl sm:first-letter:text-4xl first-letter:pr-2 first-letter:font-display first-letter:text-amber-400">
+                  {cleanP}
+                </p>
+              );
+            })}
+          </article>
+        )}
 
         {/* Chapter Bottom Navigation */}
         <div className="mt-16 pt-8 border-t border-slate-800/80 flex items-center justify-between">
@@ -344,32 +373,32 @@ export default function App() {
             className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400 hover:text-amber-400 disabled:opacity-20 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Previous</span>
+            <span>{lang === 'ta' ? 'முந்தைய அத்தியாயம்' : 'Previous'}</span>
           </button>
 
           <span className="text-xs font-mono text-slate-500">
-            {currentChapterIndex + 1} / {SAMPLE_LORE.chapters.length}
+            {currentChapterIndex + 1} / {manifest ? manifest.chapters.length : 32}
           </span>
 
           <button
-            disabled={currentChapterIndex === SAMPLE_LORE.chapters.length - 1}
+            disabled={!manifest || currentChapterIndex === manifest.chapters.length - 1}
             onClick={() => {
-              setCurrentChapterIndex(Math.min(SAMPLE_LORE.chapters.length - 1, currentChapterIndex + 1));
+              setCurrentChapterIndex(Math.min(manifest.chapters.length - 1, currentChapterIndex + 1));
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400 hover:text-amber-400 disabled:opacity-20 transition-colors"
           >
-            <span>Next</span>
+            <span>{lang === 'ta' ? 'அடுத்த அத்தியாயம்' : 'Next'}</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
       </main>
 
-      {/* Metaphysical Footer */}
+      {/* Footer */}
       <footer className="mt-20 border-t border-slate-800/60 py-8 text-center text-xs text-slate-500 font-mono">
         <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} Stories Portal • Designed for timeless public-domain literature</p>
+          <p>© {new Date().getFullYear()} Stories Portal • Public Domain Classics</p>
           <div className="flex items-center gap-4">
             <a 
               href="https://github.com/rubanbalaji-g/stories" 

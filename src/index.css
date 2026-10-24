@@ -1,31 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   body {
     font-family: 'EB Garamond', Georgia, serif;
     overflow-x: hidden;
+    background-color: #060913;
+    color: #e2e8f0;
   }
 }
 
-/* Custom Melting Bookmark Animation */
+/* Custom Surreal Animations */
+@keyframes surrealFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes celestialDrift {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.08);
+  }
+  100% {
+    transform: translate(-20px, 15px) scale(0.98);
+  }
+}
+
 @keyframes meltDrip {
   0%, 100% {
     border-radius: 0 0 16px 16px;
-    height: 100%;
   }
   50% {
     border-radius: 0 0 28px 4px;
   }
 }
 
+.animate-surreal-float {
+  animation: surrealFloat 7s ease-in-out infinite;
+}
+
+.animate-celestial {
+  animation: celestialDrift 22s ease-in-out infinite alternate;
+}
+
 .melting-ribbon {
   animation: meltDrip 6s ease-in-out infinite;
 }
 
-/* Surrealist Grain Overlay */
-.surreal-grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
-  background-size: 24px 24px;
+/* Surrealist Grain & Vignette */
+.surreal-canvas-bg {
+  background: radial-gradient(circle at 50% 20%, #172554 0%, #090d1a 50%, #030712 100%);
+}
+
+.surreal-card-glow {
+  box-shadow: 0 20px 50px -10px rgba(245, 158, 11, 0.15), 0 0 30px rgba(99, 102, 241, 0.12);
+}
+
+.vellum-canvas-bg {
+  background: radial-gradient(circle at 50% 20%, #fdfbf7 0%, #f5efe6 60%, #e7decb 100%);
+}
+
+.book-spine-3d {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-spine-3d:hover {
+  transform: translateY(-8px) rotateY(-8deg) rotateX(4deg) scale(1.02);
 }
